@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo2.png'
 
 
 
@@ -21,6 +21,7 @@ function Navbar() {
               alt=""
               className=""
             />
+            
             </NavLink>
          
           </div>

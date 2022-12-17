@@ -10,12 +10,12 @@ function Card() {
           <p className="symbol">1 $BIGNFTS = $1</p>
 
           <div className="bar">
-            <div>bar</div>
+            <div className="sub-bar"></div>
             </div>
             <p className="progress-1">
               Progress <span className="pr-num">48%</span>(23,750,345/50,000,000)
             </p>
-            <div className="d-flex justify-content-center gap-4">
+            <div className="d-flex justify-content-center gap-4 mt-10">
               <a href="/" className="connect-btn">
                 Connect Wallet
               </a>
