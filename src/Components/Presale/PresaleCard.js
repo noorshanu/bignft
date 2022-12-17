@@ -1,6 +1,7 @@
 import React from "react";
 import Clock from "../../assets/timer.png";
 import "./Presale.css";
+import Down from '../../assets/down.png'
 
 function PresaleCard() {
   return (
@@ -40,16 +41,20 @@ function PresaleCard() {
                     
                     </select>
                   </div>
+                  <div className="text-center">
+                    <img src={Down} alt="" className="down"/>
 
+                  </div>
                   <div className="d-flex sec-num">
                     <input
                       type="number"
                       className="input-num"
-                      placeholder="100,00,0:"
+                      placeholder="100,00,0"
                       name="number"
                     />
-                    <p>$BIGNFT</p>
+                    <p className="num-p">$BIGNFT</p>
                   </div>
+                  
 
                   <div className="btn-modal">
                     <button
