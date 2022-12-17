@@ -33,20 +33,20 @@ function PresaleCard() {
                 <form>
                   <div className="select-box">
                     <p>
-                      IBAT <span>10% discount</span>
+                      IBAT <span className="red">10% discount</span>
                     </p>
                     <select id="cars" name="cars">
-                      <option value="volvo">Freelancer</option>
-                      <option value="saab">Employer</option>
+                      <option value="volvo">Balance: 18,000 $IBAT</option>
+                    
                     </select>
                   </div>
 
-                  <div>
+                  <div className="d-flex sec-num">
                     <input
-                      type="email"
-                      className="fs-26px white weight-3"
-                      placeholder="Email :"
-                      name="email"
+                      type="number"
+                      className="input-num"
+                      placeholder="100,00,0:"
+                      name="number"
                     />
                     <p>$BIGNFT</p>
                   </div>
