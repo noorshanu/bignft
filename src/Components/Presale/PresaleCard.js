@@ -1,6 +1,6 @@
 import React from "react";
 import Clock from "../../assets/timer.png";
-import './Presale.css'
+import "./Presale.css";
 
 function PresaleCard() {
   return (
@@ -30,63 +30,54 @@ function PresaleCard() {
             <div className="token-box">
               <h2>Select Payment Token</h2>
               <div className="">
-                <form >
-                    <div className="select-box">
-                        <p>IBAT <span>10% discount</span></p>
+                <form>
+                  <div className="select-box">
+                    <p>
+                      IBAT <span>10% discount</span>
+                    </p>
                     <select id="cars" name="cars">
-                  <option value="volvo">Freelancer</option>
-                  <option value="saab">Employer</option>
-                </select>
-                    </div>
-               
-                    <div>
+                      <option value="volvo">Freelancer</option>
+                      <option value="saab">Employer</option>
+                    </select>
+                  </div>
 
-                 
-                  <input
-                    type="email"
-                    className="fs-26px white weight-3"
-                    placeholder="Email :"
-                    name="email"
-                  />
-                  <p>$BIGNFT</p>
-                     </div>
-                  
-                 
-                  
+                  <div>
+                    <input
+                      type="email"
+                      className="fs-26px white weight-3"
+                      placeholder="Email :"
+                      name="email"
+                    />
+                    <p>$BIGNFT</p>
+                  </div>
+
                   <div className="btn-modal">
                     <button
                       type="submit"
                       className="fs-26px white weight-5 pointer"
                     >
-                      Send
+                      BUY NOW
                     </button>
-                 
                   </div>
                 </form>
               </div>
             </div>
             <div className="token-box-2">
-                <h2>Token Info</h2>
-                <div className="sub-box">
-                    <p>Total Supply</p>
-                    <p>100,000,000 </p>
-                    <br/>
-                    <p>
-                    Token Contract Address
-                    </p>
-                    <p>0x19cd9b8e42d4ef62c3ea124110d5cfd283ceac43</p>
+              <h2>Token Info</h2>
+              <div className="sub-box">
+                <p>Total Supply</p>
+                <p>100,000,000 </p>
+                <br />
+                <p>Token Contract Address</p>
+                <p>0x19cd9b8e42d4ef62c3ea124110d5cfd283ceac43</p>
 
-                    <br/>
-                    <p>
-                    Tokens Decimals
-                    </p>
-                    <p>2</p>
-                    <br/>
-                    <p>$BIGNFTs Balance</p>
-                    <p>0</p>
-
-                </div>
-
+                <br />
+                <p>Tokens Decimals</p>
+                <p>2</p>
+                <br />
+                <p>$BIGNFTs Balance</p>
+                <p>0</p>
+              </div>
             </div>
           </div>
         </div>
