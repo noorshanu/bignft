@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Footer/Footer";
 import Card from "./Card";
 import "./Hero.css";
 
@@ -8,6 +9,8 @@ function Hero() {
       <div className="container justify-content-center align-items-center">
         <Card />
       </div>
+
+      <Footer/>
     </section>
   );
 }

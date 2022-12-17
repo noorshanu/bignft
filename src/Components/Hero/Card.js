@@ -11,18 +11,29 @@ function Card() {
 
           <div className="bar">
             <div>bar</div>
-            <p>
-              Progress <span>48%</span>(23,750,345/50,000,000)
+            </div>
+            <p className="progress-1">
+              Progress <span className="pr-num">48%</span>(23,750,345/50,000,000)
             </p>
             <div className="d-flex justify-content-center gap-4">
-              <a href="/" className="connect-btn">Connect Wallet</a>
-              <a href="/" className="how"> HOW TO BUY</a>
+              <a href="/" className="connect-btn">
+                Connect Wallet
+              </a>
+              <a href="/" className="how">
+                {" "}
+                HOW TO BUY
+              </a>
             </div>
-            <div className="d-flex justify-content-center ">
-              <img src={Clock} alt="" />
-              <p>10 DAYS, 15 HOURS, 43 MINUTES, 05 SECONDS remaining</p>
+            <div className="d-flex justify-content-center mt-10">
+              <img src={Clock} alt=""  className="timer"/>
+              <p className="count-down">
+                <span className="num">10</span> DAYS,{" "}
+                <span className="num">15</span> HOURS,{" "}
+                <span className="num">45</span> MINUTES,{" "}
+                <span className="num">10</span> SECONDS remaining
+              </p>
             </div>
-          </div>
+          
         </div>
       </div>
     </>

@@ -22,7 +22,7 @@
   border: 4px solid rgba(255, 255, 255, 0.2);
   text-align: center;
   border-radius: 16px;
-  padding: 6%;
+  padding: 3% 6%;
 }
 
 .card-content h1 {
@@ -31,14 +31,14 @@
   line-height: 43px;
   color: #ffffff;
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 .symbol {
-    font-family: serif;
-    font-weight: 300;
-    font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 30px;
-  color: #ffffff;
+  color: #8f8f8f;
   text-align: center;
-  opacity: 0.7;
 }
 .connect-btn {
   background: linear-gradient(90deg, #7100dc 0%, #ff6a57 100.23%),
@@ -49,12 +49,57 @@
   padding: 1% 2%;
   color: #fff;
 }
-.how{
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(11.5px);
-    border-radius: 4px;
-    padding: 1% 2%;
-    color: #fff;
-    }
+.how {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(11.5px);
+  border-radius: 4px;
+  padding: 1% 2%;
+  color: #fff;
+}
+
+.progress-1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  /* display: flex; */
+  text-align: end;
+  /* align-items: flex-end; */
+  color: #8f8f8f;
+}
+.pr-num {
+  font-weight: 700;
+  color: #fff;
+  opacity: unset;
+}
+
+.count-down {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+
+  align-items: center;
+  text-align: center;
+
+  color: #dddddd;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+}
+.num {
+  font-weight: 700;
+  color: #fff;
+}
+.mt-10 {
+  margin-top: 3%;
+}
+.timer {
+  height: 25px;
+  margin-top: 5px;
+  width: auto;
+  margin-right: 5px;
+}
