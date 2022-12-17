@@ -6,7 +6,7 @@ import Down from '../../assets/down.png'
 function PresaleCard() {
   return (
     <>
-      <div className="card-box">
+      <div className="card-box-2">
         <div className="card-content">
           <h1>BUY $BIGNFTS ON PRESALE</h1>
           <p className="symbol">1 $BIGNFTS = $1</p>
@@ -74,7 +74,7 @@ function PresaleCard() {
                 <p className="sub-b-p">100,000,000 </p>
                 <br />
                 <p>Token Contract Address</p>
-                <p className="sub-b-p">0x19cd9b8e42d4ef62c3ea124...</p>
+                <p className="sub-b-p">0x19cd9b8e42d4ef62c3...</p>
 
                 <br />
                 <p>Tokens Decimals</p>

@@ -121,7 +121,7 @@ margin-top: 20px;
 .sub-box{
     background: linear-gradient(90deg, rgba(23, 44, 102, 0.3) 0%, rgba(24, 22, 82, 0.3) 100%);
     border-radius: 4px;
-    width: 90%;
+    width: 100%;
     padding: 2% 3%;
 }
 .sub-box p{
