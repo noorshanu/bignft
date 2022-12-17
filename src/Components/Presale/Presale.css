@@ -99,4 +99,23 @@ text-shadow: 0px 4.8043px 4.8043px rgba(0, 0, 0, 0.06);
 .down{
     margin-top: 20px;
 }
+.buy-btn-token{
+    background: linear-gradient(90deg, #7100DC 0%, #FF6A57 100.23%), linear-gradient(90.18deg, #003E9B 0.15%, #AD53CC 99.85%), rgba(10, 13, 56, 0.8);
+box-shadow: 2px 2px 23px rgba(0, 0, 0, 0.3);
+border-radius: 4px;
+color: #fff;
+font-family: 'Poppins';
+font-style: italic;
+font-weight: 800;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+text-align: center;
+text-transform: uppercase;
+border: 1px solid #484848;
+width: 100%;
+padding: 2% 1%;
+margin-top: 20px;
+}
 

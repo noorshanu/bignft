@@ -59,7 +59,7 @@ function PresaleCard() {
                   <div className="btn-modal">
                     <button
                       type="submit"
-                      className="fs-26px white weight-5 pointer"
+                      className="buy-btn-token"
                     >
                       BUY NOW
                     </button>
