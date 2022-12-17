@@ -1,44 +1,98 @@
-import React from 'react'
+import React from "react";
 import Clock from "../../assets/timer.png";
+import './Presale.css'
 
 function PresaleCard() {
   return (
     <>
       <div className="card-box">
         <div className="card-content">
-        <h1>BUY $BIGNFTS ON PRESALE</h1>
+          <h1>BUY $BIGNFTS ON PRESALE</h1>
           <p className="symbol">1 $BIGNFTS = $1</p>
 
           <div className="bar">
             <div className="sub-bar"></div>
-            </div>
-            <p className="progress-1">
-              Progress <span className="pr-num">48%</span>(23,750,345/50,000,000)
+          </div>
+          <p className="progress-1">
+            Progress <span className="pr-num">48%</span>(23,750,345/50,000,000)
+          </p>
+
+          <div className="d-flex justify-content-center mt-10">
+            <img src={Clock} alt="" className="timer" />
+            <p className="count-down">
+              <span className="num">10</span> DAYS,{" "}
+              <span className="num">15</span> HOURS,{" "}
+              <span className="num">45</span> MINUTES,{" "}
+              <span className="num">10</span> SECONDS remaining
             </p>
-        
-            <div className="d-flex justify-content-center mt-10">
-              <img src={Clock} alt=""  className="timer"/>
-              <p className="count-down">
-                <span className="num">10</span> DAYS,{" "}
-                <span className="num">15</span> HOURS,{" "}
-                <span className="num">45</span> MINUTES,{" "}
-                <span className="num">10</span> SECONDS remaining
-              </p>
-            </div>
-            <div className='club'>
-                <div className='token-box'>
+          </div>
+          <div className="club">
+            <div className="token-box">
+              <h2>Select Payment Token</h2>
+              <div className="">
+                <form >
+                    <div className="select-box">
+                        <p>IBAT <span>10% discount</span></p>
+                    <select id="cars" name="cars">
+                  <option value="volvo">Freelancer</option>
+                  <option value="saab">Employer</option>
+                </select>
+                    </div>
+               
+                    <div>
 
+                 
+                  <input
+                    type="email"
+                    className="fs-26px white weight-3"
+                    placeholder="Email :"
+                    name="email"
+                  />
+                  <p>$BIGNFT</p>
+                     </div>
+                  
+                 
+                  
+                  <div className="btn-modal">
+                    <button
+                      type="submit"
+                      className="fs-26px white weight-5 pointer"
+                    >
+                      Send
+                    </button>
+                 
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div className="token-box-2">
+                <h2>Token Info</h2>
+                <div className="sub-box">
+                    <p>Total Supply</p>
+                    <p>100,000,000 </p>
+                    <br/>
+                    <p>
+                    Token Contract Address
+                    </p>
+                    <p>0x19cd9b8e42d4ef62c3ea124110d5cfd283ceac43</p>
+
+                    <br/>
+                    <p>
+                    Tokens Decimals
+                    </p>
+                    <p>2</p>
+                    <br/>
+                    <p>$BIGNFTs Balance</p>
+                    <p>0</p>
 
                 </div>
-                <div className='token-box-2'>
-
-                </div>
 
             </div>
-            </div>
+          </div>
         </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default PresaleCard
+export default PresaleCard;
