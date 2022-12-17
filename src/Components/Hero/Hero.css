@@ -4,12 +4,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.card-box{
-    margin: auto;
-    max-width: 730px;
-    width: 100%;
-    height: auto;
-    padding-top: 13%;
+.card-box {
+  margin: auto;
+  max-width: 730px;
+  width: 100%;
+  height: auto;
+  padding-top: 13%;
 }
 .card-content {
   backdrop-filter: blur(5px);
@@ -20,7 +20,39 @@
     rgba(35, 20, 68, 0.5) 100%
   );
   border: 4px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
+  text-align: center;
   border-radius: 16px;
   padding: 6%;
 }
+
+.card-content h1 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 43px;
+  color: #ffffff;
+}
+.symbol {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  opacity: 0.7;
+}
+.connect-btn {
+  background: linear-gradient(90deg, #7100dc 0%, #ff6a57 100.23%),
+    linear-gradient(90.18deg, #003e9b 0.15%, #ad53cc 99.85%),
+    rgba(10, 13, 56, 0.8);
+  box-shadow: 2px 2px 23px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 1% 2%;
+}
+.how{
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(11.5px);
+    border-radius: 4px;
+    padding: 1% 2%;
+    color: #fff;
+    }
