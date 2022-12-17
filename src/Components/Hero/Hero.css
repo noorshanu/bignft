@@ -4,6 +4,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.card-box{
+    margin: auto;
+    max-width: 730px;
+    width: 100%;
+    height: auto;
+    padding-top: 13%;
+}
 .card-content {
   backdrop-filter: blur(5px);
   background: linear-gradient(
@@ -13,6 +20,7 @@
     rgba(35, 20, 68, 0.5) 100%
   );
   border: 4px solid rgba(255, 255, 255, 0.2);
-
+    text-align: center;
   border-radius: 16px;
+  padding: 6%;
 }
