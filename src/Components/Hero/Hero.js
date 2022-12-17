@@ -2,7 +2,12 @@ import React from 'react'
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <section className='main'>
+        <div className='container'>
+
+        </div>
+        
+    </section>
   )
 }
 

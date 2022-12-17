@@ -2,21 +2,12 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-
-
+import Logo from '../../assets/logo.png'
 
 
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
-
-
-
-
-
-
-
-
 
   return (
     <>
@@ -26,7 +17,7 @@ function Navbar() {
           <div className="d-flex foot-logo">
             <NavLink to='/'>
             <img
-              src="https://ik.imagekit.io/cforcrypto/Dework/logo_new.png?ik-sdk-version=javascript-1.4.3&updatedAt=1669805675437"
+              src={Logo}
               alt=""
               className=""
             />
