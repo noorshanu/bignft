@@ -126,3 +126,9 @@ height: 20px;
 top: 111px;
 position: absolute;
 }
+@media (max-width:768px) {
+  .mobres-foot{
+    padding-top: 49%;
+  }
+  
+}

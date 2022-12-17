@@ -9,7 +9,7 @@ function Hero() {
       <div className="container justify-content-center align-items-center">
         <Card />
       </div>
-
+<div className="mobres-foot"></div>
       <Footer/>
     </section>
   );
