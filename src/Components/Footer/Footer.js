@@ -30,10 +30,10 @@ function Footer() {
                 <img src={Img5} alt=""/>
             </div>
             <div >
-                <img src={Img6} alt=""/>
+                <img src={Img6} alt="" className='bt2'/>
             </div>
             <div >
-                <img src={Img7} alt=""/>
+                <img src={Img7} alt="" className='eth'/>
             </div>
             <div >
                 <img src={Img8} alt=""/>
