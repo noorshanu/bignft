@@ -118,4 +118,32 @@ width: 100%;
 padding: 2% 1%;
 margin-top: 20px;
 }
+.sub-box{
+    background: linear-gradient(90deg, rgba(23, 44, 102, 0.3) 0%, rgba(24, 22, 82, 0.3) 100%);
+    border-radius: 4px;
+    width: 90%;
+    padding: 2% 3%;
+}
+.sub-box p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+.sub-b-p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 13px !important;
+line-height: 15px !important;
+/* identical to box height */
 
+text-transform: uppercase;
+
+color: rgba(255, 255, 255, 0.7) !important;
+margin-bottom: 5px;
+
+}

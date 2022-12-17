@@ -71,17 +71,17 @@ function PresaleCard() {
               <h2>Token Info</h2>
               <div className="sub-box">
                 <p>Total Supply</p>
-                <p>100,000,000 </p>
+                <p className="sub-b-p">100,000,000 </p>
                 <br />
                 <p>Token Contract Address</p>
-                <p>0x19cd9b8e42d4ef62c3ea124110d5cfd283ceac43</p>
+                <p className="sub-b-p">0x19cd9b8e42d4ef62c3ea124...</p>
 
                 <br />
                 <p>Tokens Decimals</p>
-                <p>2</p>
+                <p className="sub-b-p">2</p>
                 <br />
                 <p>$BIGNFTs Balance</p>
-                <p>0</p>
+                <p className="sub-b-p">0</p>
               </div>
             </div>
           </div>
