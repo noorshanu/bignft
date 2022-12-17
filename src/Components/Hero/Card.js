@@ -16,7 +16,7 @@ function Card() {
               Progress <span className="pr-num">48%</span>(23,750,345/50,000,000)
             </p>
             <div className="d-flex justify-content-center gap-4 mt-10">
-              <a href="/" className="connect-btn">
+              <a href="/presale" className="connect-btn">
                 Connect Wallet
               </a>
               <a href="/" className="how">
