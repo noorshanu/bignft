@@ -5,35 +5,47 @@ import CountDown from "../Common/CountDown";
 import ProgressBar from "../Common/ProgressBar";
 import UserContext from "../../UserContext";
 import { ethers } from "ethers";
-import BN from "bn.js";
+import { TokenList } from "../../Constants/Constants";
 
 function PresaleCard() {
-  const { provider, contract, account } = useContext(UserContext)
-  const [BNBBalance, setBNBBalance] = useState(0)
-  const [USDTBalance, setUSDTBalance] = useState(0)
-  const [IBATBalance, setIBATBalance] = useState(0)
-  const currenyElement = useRef()
+  const { provider, contracts, account } = useContext(UserContext)
+  const [balances, setBalances] = useState({ BNB: 0 })
+  const tokenElement = useRef()
   const nftAmountElement = useRef()
 
   useEffect(() => {
     if (!account) {
-      setBNBBalance(0)
-      setUSDTBalance(0)
-      setIBATBalance(0)
+      setBalances({
+        BNB: 0,
+        USDT: 0,
+        USDC: 0,
+        BUSD: 0,
+        DAI: 0,
+        IBAT: 0,
+      })
     } else {
       const getBNBBalance = async () => {
         const balance = await provider.getBalance(account)
-        setBNBBalance(ethers.utils.formatEther(balance))
+        return ethers.utils.formatEther(balance)
       }
-      const getUSDTBalance = async () => {
 
+      const getTokenBalances = async (token) => {
+        console.log(token, " getting balance")
+        const balance = await contracts[token].balanceOf(account)
+        const decimals = (await contracts[token].decimals()).toNumber()
+        console.log("success")
+        return balance.div("1" + "0".repeat(decimals)).toNumber()
       }
-      const getIBATBalance = async () => {
 
+      const getAllBalances = async () => {
+        const balances = { BNB: await getBNBBalance() }
+        for (const token of TokenList) {
+          balances[token] = await getTokenBalances(token)
+        }
+        setBalances(balances)
       }
-      getBNBBalance()
-      getUSDTBalance()
-      getIBATBalance()
+
+      getAllBalances()
     }
 
   }, [account])
@@ -45,25 +57,32 @@ function PresaleCard() {
       return
     }
 
-    const currency = currenyElement.current.value
+    const token = tokenElement.current.value
     const nftAmount = nftAmountElement.current.value
 
-    const salePrice = await contract.salePrice()
-    // try {
-    if (currency == "bnb") {
-      const bnbPrice = await contract.getBNBLatestPrice()
-      const transaction = await contract.buyWithBNB(nftAmount, { value: salePrice.mul(nftAmount).div(bnbPrice) })
+    try {
+      let transaction = null;
+      if (token == "BNB") {
+        const bnbAmount = await contracts.Main.getBNBAmount(nftAmount)
+        console.log(bnbAmount)
+        transaction = await contracts.Main.buyWithBNB(nftAmount, { value: bnbAmount })
+      } else if (token == "IBAT") {
+        const ibatAmount = await contracts.Main.getIBATAmount(nftAmount)
+        await contracts.IBAT.approve(contracts.Main.address, ibatAmount)
+        transaction = await contracts.Main.buyWithIBAT(nftAmount)
+      } else {
+        const tokenIndex = TokenList.indexOf(token)
+        const tokenAmount = await contracts.Main.getTokenAmount(nftAmount, tokenIndex)
+        await contracts[token].approve(contracts.Main.address, tokenAmount)
+        transaction = await contracts.Main.buyWithUSD(nftAmount, tokenIndex)
+      }
       const tx_result = await transaction.wait()
       alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`)
       console.log("transaction", tx_result.transactionHash)
-    } else if (currency == "usdt") {
-      // await contract.buyWithBNB(nftAmount, { value: salePrice.mul(new BN(nftAmount)) })
-    } else {
-
+    } catch (error) {
+      alert("Error occured during transaction. Please check the browser console.\n" + error.reason.data.message)
+      console.error("Transaction Error:", error.reason)
     }
-    // } catch (error) {
-    //   console.log("error ", error.reason)
-    // }
   }
 
   return (
@@ -83,10 +102,11 @@ function PresaleCard() {
                     <p>
                       IBAT <span className="red">10% discount</span>
                     </p>
-                    <select id="cars" name="cars" ref={currenyElement}>
-                      <option value="bnb">Balance: {BNBBalance} BNB</option>
-                      <option value="usdt">Balance: {USDTBalance} USDT</option>
-                      <option value="ibat">Balance: {USDTBalance} IBAT</option>
+                    <select id="cars" name="cars" ref={tokenElement}>
+                      <option value="BNB">Balance: {balances.BNB} BNB</option>
+                      {TokenList.map(((token, index) => (
+                        <option key={index} value={token}>Balance: {balances[token]} {token}</option>
+                      )))}
                     </select>
                   </div>
                   <div className="text-center">

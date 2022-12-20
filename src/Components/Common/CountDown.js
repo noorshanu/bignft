@@ -3,7 +3,8 @@ import { useContext, useEffect, useState } from "react"
 import UserContext from "../../UserContext";
 
 const CountDown = () => {
-    const { contract } = useContext(UserContext)
+    const { contracts } = useContext(UserContext)
+    const contract = contracts.Main
 
     const [timeRange, setTimeRange] = useState()
     const [currentTime, setCurrentTime] = useState()
