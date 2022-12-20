@@ -1,4 +1,4 @@
-export const TEST_MODE = true
+export const TEST_MODE = false
 
 export const TESTNET_ADDRESSES = {
     Main: "0x50116fF9Cb47ec32bC62DaDCfA3262335ed5b5f7",

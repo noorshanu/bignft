@@ -34,7 +34,7 @@ function PresaleCard() {
         const balance = await contracts[token].balanceOf(account)
         const decimals = (await contracts[token].decimals()).toNumber()
         console.log("success")
-        return balance.div("1" + "0".repeat(decimals)).toNumber()
+        return ethers.utils.formatEther(balance)
       }
 
       const getAllBalances = async () => {
