@@ -34,7 +34,7 @@ function PresaleCard() {
         const balance = await contracts[token].balanceOf(account)
         const decimals = (await contracts[token].decimals()).toNumber()
         console.log("success")
-        return ethers.utils.formatEther(balance)
+        return balance.div("1" + "0".repeat(decimals)).toNumber()
       }
 
       const getAllBalances = async () => {
@@ -64,23 +64,32 @@ function PresaleCard() {
       let transaction = null;
       if (token == "BNB") {
         const bnbAmount = await contracts.Main.getBNBAmount(nftAmount)
-        console.log(bnbAmount)
-        transaction = await contracts.Main.buyWithBNB(nftAmount, { value: bnbAmount })
+        console.log(bnbAmount.toString())
+        transaction = await contracts.Main.buyWithBNB(nftAmount, { value: bnbAmount.toString() })
       } else if (token == "IBAT") {
-        const ibatAmount = await contracts.Main.getIBATAmount(nftAmount)
-        await contracts.IBAT.approve(contracts.Main.address, ibatAmount)
-        transaction = await contracts.Main.buyWithIBAT(nftAmount)
+        const ibatAmount = await contracts.Main.getIBATAmount(nftAmount.toString())
+        const all = await contracts['IBAT'].allowance(account, contracts.Main.address)
+        console.log("allowance",all.toString())
+       if (all.toString() < ibatAmount.toString()) {
+        await contracts.IBAT.approve(contracts.Main.address, ibatAmount.toString())
+        } else {
+        transaction = await contracts.Main.buyWithIBAT(nftAmount.toString())
+        }
       } else {
         const tokenIndex = TokenList.indexOf(token)
-        const tokenAmount = await contracts.Main.getTokenAmount(nftAmount, tokenIndex)
-        await contracts[token].approve(contracts.Main.address, tokenAmount)
-        transaction = await contracts.Main.buyWithUSD(nftAmount, tokenIndex)
+        const tokenAmount = await contracts.Main.getTokenAmount(nftAmount.toString(), tokenIndex)
+        const alla = await contracts[token].allowance(account, contracts.Main.address)
+        if (alla.toString() < tokenAmount.toString()) {
+        await contracts[token].approve(contracts.Main.address, tokenAmount.toString())
+        } else {
+        transaction = await contracts.Main.buyWithUSD(nftAmount.toString(), tokenIndex)
+        }
       }
       const tx_result = await transaction.wait()
       alert(`Successfully bought domain. TX: ${tx_result.transactionHash}`)
       console.log("transaction", tx_result.transactionHash)
     } catch (error) {
-      alert("Error occured during transaction. Please check the browser console.\n" + error.reason.data.message)
+      alert("Error occured during transaction. Please check the browser console.\n" + error.reason)
       console.error("Transaction Error:", error.reason)
     }
   }
