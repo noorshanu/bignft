@@ -144,8 +144,12 @@
   .card-content h1 {
     font-weight: 400;
     font-size: 22px;
-    line-height: 28px;}
-    .sub-bar{
-      top: 87px;
-    }
+    line-height: 28px;
+  }
+  .sub-bar {
+    top: 87px;
+  }
+  .count-down{
+    font-size: 11px;
+  }
 }
