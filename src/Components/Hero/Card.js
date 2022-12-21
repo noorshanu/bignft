@@ -13,6 +13,7 @@ function Card() {
       const success = await connectWallet();
       if (!success) {
         alert('please connect to wallet')
+        navigate('/')
       }
     }
     navigate("/presale");
