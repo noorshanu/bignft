@@ -5,16 +5,42 @@
     grid-template-columns: repeat(8,auto);
     gap: 18px;
 }
+
+.mob-header{
+    display: none;
+}
+.hide-mob{
+    display: block;
+}
 @media (max-width:768px) {
+    .mob-header{
+        display: block;
+        padding-top: 52%;
+    }
+    .hide-mob{
+        display: none;
+    }
+    .mob-header h1{
+        font-size: 18px;
+    }
     .footer{
-        grid-template-columns: repeat(2,150px);
+        grid-template-columns: repeat(4,93px);
+        gap: 5px;
+        margin-top: 5px;
     }
     .bt2{
         width: auto;
-        height: 18px;
+        height: 14px;
     }
     .eth{
         width: auto;
-        height: 18px;
+        height: 14px;
+        margin-left: 68px;
+    }
+    .img3{
+        height: 14px;
+    }
+    .eth2{
+        margin-left: 104px;
     }
 }

@@ -13,21 +13,25 @@ function Footer() {
   return (
     <>
     <div className='container justify-content-center'>
+        <div className='mob-header text-center'>
+            <h1>AS SEEN ON:</h1>
+
+        </div>
         <div className='footer'>
-            <div >
+            <div className='hide-mob' >
                 <img src={Img2} alt=""/>
             </div>
             <div >
-                <img src={Img3} alt=""/>
+                <img src={Img3} alt="" className='img3'/>
             </div>
             <div >
-                <img src={Img4} alt=""/>
+                <img src={Img4} alt="" className='img3'/>
             </div>
             <div >
-                <img src={Img1} alt=""/>
+                <img src={Img1} alt="" className='img3'/>
             </div>
             <div >
-                <img src={Img5} alt=""/>
+                <img src={Img5} alt="" className='img3'/>
             </div>
             <div >
                 <img src={Img6} alt="" className='bt2'/>
@@ -36,7 +40,7 @@ function Footer() {
                 <img src={Img7} alt="" className='eth'/>
             </div>
             <div >
-                <img src={Img8} alt=""/>
+                <img src={Img8} alt="" className='img3 eth2'/>
             </div>
             
         </div>

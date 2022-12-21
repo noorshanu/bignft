@@ -152,4 +152,7 @@
   .count-down{
     font-size: 11px;
   }
+  .main{
+    background-position-x: 98%;
+  }
 }
