@@ -11,7 +11,7 @@
   height: auto;
   padding-top: 13%;
 }
-.card-box-2{
+.card-box-2 {
   margin: auto;
   max-width: 602px;
   width: 100%;
@@ -110,25 +110,42 @@
   width: auto;
   margin-right: 5px;
 }
-.bar{
-  background: linear-gradient(90deg, #FFFFFF 0%, #FD6859 10.42%, #7201DC 34.9%, #FFFFFF 100%);
-box-shadow: 0px 0px 31px #9564D3;
-border-radius: 4px;
-height: 5px;
-margin-bottom: 10px;
+.bar {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #fd6859 10.42%,
+    #7201dc 34.9%,
+    #ffffff 100%
+  );
+  box-shadow: 0px 0px 31px #9564d3;
+  border-radius: 4px;
+  height: 5px;
+  margin-bottom: 10px;
 }
-.sub-bar{
-  background: linear-gradient(90deg, #7100DC 0%, #FF6A57 100.23%), linear-gradient(90.18deg, #003E9B 0.15%, #AD53CC 99.85%), rgba(10, 13, 56, 0.8);
-box-shadow: 2px 2px 23px rgba(0, 0, 0, 0.3);
-border-radius: 4px;
-width: 60%;
-height: 20px;
-top: 111px;
-position: absolute;
+.sub-bar {
+  background: linear-gradient(90deg, #7100dc 0%, #ff6a57 100.23%),
+    linear-gradient(90.18deg, #003e9b 0.15%, #ad53cc 99.85%),
+    rgba(10, 13, 56, 0.8);
+  box-shadow: 2px 2px 23px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  width: 60%;
+  height: 20px;
+  top: 111px;
+  position: absolute;
 }
-@media (max-width:768px) {
-  .mobres-foot{
-    padding-top: 49%;
+@media (max-width: 768px) {
+  .mobres-foot {
+    padding-top: 14%;
   }
-  
+  .card-box {
+    padding-top: 50%;
+  }
+  .card-content h1 {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;}
+    .sub-bar{
+      top: 87px;
+    }
 }
